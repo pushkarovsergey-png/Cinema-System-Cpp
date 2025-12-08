@@ -1,7 +1,0 @@
-# ninja log v7
-8	3316	7869351422529961	CMakeFiles/Client.dir/Client.cpp.obj	5013d4b86b6e6ec0
-4	4112	7869351422440009	CMakeFiles/Server.dir/Server.cpp.obj	c26f1d1c99f0a636
-3371	4387	7869351456278764	Client.exe	2f3cbafd5db00aa5
-4147	4692	7869351463856434	Server.exe	731095da0c80f905
-16	5078	7869351422559938	CMakeFiles/run_tests.dir/CinemaTests.cpp.obj	b7433b0a7ba0ccfa
-5080	5327	7869351473197831	run_tests.exe	250cd293dcc1c833
