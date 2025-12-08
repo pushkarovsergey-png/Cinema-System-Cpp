@@ -1,0 +1,4 @@
+E:/CppProjects/Cinema/build/CMakeFiles/Server.dir
+E:/CppProjects/Cinema/build/CMakeFiles/Client.dir
+E:/CppProjects/Cinema/build/CMakeFiles/edit_cache.dir
+E:/CppProjects/Cinema/build/CMakeFiles/rebuild_cache.dir
