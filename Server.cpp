@@ -19,7 +19,7 @@ void clientHandler(SOCKET clientSocket, Cinema& cinema){
         if(command == "SHOW"){
             answer = cinema.getHallStatus();
         }
-        else if(command.starts_with("BOOK")){
+        else if(command.rfind("BOOK", 0) == 0){
             try{
                 command.erase(0, 4);
                 int id = std::stoi(command);

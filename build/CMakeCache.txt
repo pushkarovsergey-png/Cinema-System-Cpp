@@ -269,6 +269,9 @@ Cinema_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Cinema_SOURCE_DIR:STATIC=E:/CppProjects/Cinema
 
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=E:/MSYS32/ucrt64/lib/cmake/GTest
+
 
 ########################
 # INTERNAL cache entries
@@ -434,4 +437,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding GTest
+FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[E:/MSYS32/ucrt64/lib/cmake/GTest/GTestConfig.cmake][ ][v1.17.0()]
 

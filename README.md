@@ -42,3 +42,14 @@ Simply run the provided bash script. It will build the project and launch the Se
 
 ```bash
 ./run.sh
+
+## Testing (Google Test)
+
+The project includes Unit Tests to verify the business logic (booking seats, race conditions).
+Framework: **Google Test (GTest)**.
+
+### How to run tests:
+1. Build the project.
+2. Run the test executable:
+   ```bash
+   ./run_tests.exe
