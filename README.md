@@ -1,26 +1,25 @@
-#  Cinema Booking System (C++ Multithreaded TCP Server)
+# Cinema Booking System (C++ Multithreaded TCP Server)
 
 This is a real-time cinema ticketing simulation designed to demonstrate **Network Programming**, **Multithreading**, and **Thread Safety** in C++.
 
 It consists of a **Central Server** (Cinema Hall) and multiple **Clients** (Cashiers/Terminals). Multiple clients can connect simultaneously to view seat availability and book tickets without data races.
 
-##  Features
+## Features
 
 * **TCP/IP Networking:** Implemented using Windows Sockets 2 (`Winsock2`).
-* **Multithreading:** The server handles each client in a separate thread (`std::thread`), allowing concurrent connections.
-* **Thread Safety:** Uses `std::mutex` and `std::lock_guard` to protect the seating map from Race Conditions (preventing double-booking).
-* **Business Logic Layer:** Separated logic in `Cinema` class.
-* **Automation:** Includes a Bash script (`run.sh`) for one-click build and launch.
-* **Modern C++:** Uses C++20 features.
+* **Multithreading:** The server handles each client in a separate thread (`std::thread`).
+* **Thread Safety:** Uses `std::mutex` and `std::lock_guard` to prevent double-booking (Race Conditions).
+* **Smart Automation:** Includes a **Python script (`run.py`)** that automatically cleans old processes, builds the project, and launches the system.
+* **Modern C++:** Uses C++17 standard.
 
-## 🛠 Tech Stack
+## Tech Stack
 
-* **Language:** C++20
+* **Language:** C++17
 * **Build System:** CMake
+* **Automation:** Python 3
 * **OS:** Windows (MinGW/GCC)
-* **Tools:** Git, Bash
 
-##  Commands
+## Commands
 
 When the client is connected, you can use the following commands:
 
@@ -30,26 +29,38 @@ When the client is connected, you can use the following commands:
 | **`BOOK <id>`** | Attempts to book a specific seat number (0-9). | `BOOK 5` |
 | **`EXIT`** | Disconnects the client from the server. | `EXIT` |
 
-##  How to Build and Run
+## How to Build and Run
 
 ### Prerequisites
-* C++ Compiler (MinGW/GCC)
-* CMake
-* Git Bash (recommended for running the script)
+* C++ Compiler (MinGW/GCC) added to system PATH.
+* CMake.
+* Python 3.
 
-### Option 1: Automatic (Recommended)
-Simply run the provided bash script. It will build the project and launch the Server + 2 Clients automatically.
+### Option 1: Automatic Launch (Recommended)
+Simply run the Python script. It handles everything: killing old processes, compiling, and launching.
 
 ```bash
-./run.sh
+python run.py
+```
+### Option 2: Manual Build
+If you want to build it manually without the script:
 
-## Testing (Google Test)
+```bash
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+cmake --build .
+```
 
-The project includes Unit Tests to verify the business logic (booking seats, race conditions).
-Framework: **Google Test (GTest)**.
+Then run CinemaServer.exe first, followed by CinemaClient.exe.
 
-### How to run tests:
-1. Build the project.
-2. Run the test executable:
-   ```bash
-   ./run_tests.exe
+### Testing
+
+The project is configured to use Google Test. The run.py script automatically attempts to run tests if they are built successfully.
+
+## To run manually after building:
+
+```bash
+./build/run_tests.exe
+```
+
