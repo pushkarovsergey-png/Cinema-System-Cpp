@@ -18,7 +18,7 @@ int main(){
     else{
         std::cout << "Connected" << std::endl;
     }
-    char buffer[1024];
+    char buffer[1025];
     while(true){
         std::cout << "\nEnter SHOW or BOOK and id or EXIT" << std::endl;
         std::string command;
@@ -32,6 +32,10 @@ int main(){
         if(bytes > 0){
             buffer[bytes] = '\0';
             std::cout << buffer;
+        }
+        else{
+            std::cout << "Server disconnected" << std::endl;
+            break;
         }
     }
     closesocket(clientSocket);

@@ -1,0 +1,5 @@
+D:/CppProjects/Cinema-System-Cpp/build/CMakeFiles/CinemaServer.dir
+D:/CppProjects/Cinema-System-Cpp/build/CMakeFiles/CinemaClient.dir
+D:/CppProjects/Cinema-System-Cpp/build/CMakeFiles/run_tests.dir
+D:/CppProjects/Cinema-System-Cpp/build/CMakeFiles/edit_cache.dir
+D:/CppProjects/Cinema-System-Cpp/build/CMakeFiles/rebuild_cache.dir

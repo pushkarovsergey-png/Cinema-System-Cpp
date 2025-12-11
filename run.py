@@ -25,7 +25,7 @@ os.system("start cmd /c build\\CinemaServer.exe")
 time.sleep(1)
 os.system("start cmd /c build\\CinemaClient.exe")
 os.system("start cmd /c build\\CinemaClient.exe")
-
+os.system("start cmd /c build\\CinemaClient.exe")
 if os.path.exists("build\\run_tests.exe"):
     print("Testing...")
     os.system("build\\run_tests.exe")

@@ -64,3 +64,8 @@ The project is configured to use Google Test. The run.py script automatically at
 ./build/run_tests.exe
 ```
 
+##Future Improvements
+
+* **Cross-platform support:** Replace 'Winsock2' with generic BSD sockets or Boost.Asio to suppory Linux.
+* **Thread Pool:** Replace 'std::thread' per client with a Thread Pool to handle high load (C10k problem).
+* **Protocol Serialization:** Use JSON or Protobuf instead of raw strings for commands. 

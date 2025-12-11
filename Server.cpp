@@ -52,7 +52,7 @@ int main(){
     serverAddr.sin_port = htons(8080);
     serverAddr.sin_addr.s_addr = INADDR_ANY;
     bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr));
-    listen(serverSocket, 1);
+    listen(serverSocket, SOMAXCONN);
     std::cout << "Server started. Waiting for conection..." << std::endl;
     Cinema cinema;
     std::cout << "Server started..." << std::endl;
