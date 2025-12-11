@@ -6,7 +6,7 @@
 #include <winsock2.h>
 
 void clientHandler(SOCKET clientSocket, Cinema& cinema){
-    char buffer[1024];
+    char buffer[1025];
     while(true){
         int bytes = recv(clientSocket, buffer, 1024, 0);
         if (bytes <= 0){
