@@ -66,6 +66,5 @@ The project is configured to use Google Test. The run.py script automatically at
 
 ##Future Improvements
 
-* **Cross-platform support:** Replace 'Winsock2' with generic BSD sockets or Boost.Asio to suppory Linux.
-* **Thread Pool:** Replace 'std::thread' per client with a Thread Pool to handle high load (C10k problem).
-* **Protocol Serialization:** Use JSON or Protobuf instead of raw strings for commands. 
+* **Concurrency Optimization (C++17):** Replace standard `std::mutex` with `std::shared_mutex` to implement a Readers-Writer lock pattern. This will significantly improve performance by allowing multiple clients to check seat availability simultaneously.
+* **Scalability (Thread Pool):** Implement a Thread Pool to handle high loads and address the C10k problem, replacing the current thread-per-client model.
